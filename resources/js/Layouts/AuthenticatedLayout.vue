@@ -173,7 +173,7 @@ const toggleSettings = () => {
                 </Link>
 
                 <Link
-                    v-if="$page.props.auth.user.role === 'Administrator'"
+                    v-if="$page.props.auth.user.roles.includes('Administrator')"
                     :href="route('templateyuri.index')"
                     :class="
                         $page.component === 'Uploadtemplateyuri/Index'
